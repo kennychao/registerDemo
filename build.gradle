@@ -1,0 +1,28 @@
+apply plugin: 'tomcat'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-tomcat-plugin:1.0'
+        classpath 'com.google.code.gson:gson:2.3.1'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet-core:2.7'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    //def tomcatVersion = '8.5.20'
+    //tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+    //       "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+    //tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
+    //    exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+    //}
+}
